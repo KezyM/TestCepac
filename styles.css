@@ -1,0 +1,469 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: 'Owners Text', sans-serif;
+  overflow: hidden;
+}
+
+.wrapper h1{
+	font-size: 70px;
+	margin-bottom: -50px;
+}
+
+.wrapper h3{
+	font-size: 50px;
+	font-family: 'Owners Text', 'sans-serif'
+}
+
+.wrapper h2{
+	font-size: 70px;
+	font-family: 'Owners Text', 'sans-serif'
+}
+
+
+
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 200px;
+  height: 48px;
+}
+
+.navigation {
+  display: flex; /* Display navigation items side by side */
+  align-items: center; /* Vertically center navigation items */
+	align-content: center;
+	text-decoration: none;
+	margin-right: -700px;                             /* Kz added later */
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 20px;
+  position: relative; /* Add relative positioning to position the dropdown */
+	text-decoration: none;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #02532B;
+}
+
+.navigation a :hover {
+	text-decoration: underline;
+}
+
+/* Updated Dropdown Styles */
+
+dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the dropdown below the navigation item */
+  left: 0;
+  background-color: #02532B;
+  min-width: 160px;
+  padding: 0; /* Remove padding for the main container */
+  list-style: none; /* Remove list-style */
+  margin: 0; /* Remove default margin */
+}
+
+/* Updated Dropdown Display on Hover */
+.navigation li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: none; /* Each item takes up full width */                             /* Kz added later to hide dropdown */
+  color: #ffffff;
+	background-color: lightgray;
+  text-decoration: none;
+  padding: 5px 10px; /* Add some padding for better spacing */
+  border-top: 1px solid #ffffff; /* Add top border to separate items */
+  border-bottom: 1px solid #ffffff; /* Add bottom border to separate items */
+}
+
+/* First item rounded border */
+.dropdown-content a:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Last item rounded border */
+.dropdown-content a:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #02532B;
+  color: #ffffff;
+	border: #02532B;
+    border-style: solid;
+    border-color: #02532B;
+}
+
+/* Button Styles */
+.headbuttons {
+  display: flex;
+  align-items: center;
+}
+
+.login-button,
+.contact-button {
+  background-color: #02532B;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button {
+  margin-right: 10px; /* Adjust the margin as needed to push the buttons closer */
+  border: 2px solid #ffffff;
+}
+
+.contact-button {
+  background-color: #ffffff;
+  color: #02532B;
+  border: 2px solid #02532B;
+}
+
+/* Button Hover Effect */
+.login-button:hover {
+  background-color: #ffffff;
+  color: #02532B;
+  border: 2px solid #02532B;
+}
+
+.contact-button:hover {
+  background-color: #02532B;
+  color: #ffffff;
+  border: 2px solid #02532B;                             /* Kz added later */
+}
+
+
+.button1, .button2 {
+  padding: 10px 20px;
+  font-family: 'Owners Text', sans-serif;
+  cursor: pointer;
+	background-color: #02532B;
+  color: #ffffff;                              /* Kz added later */
+  border: none;                              /* Kz added later */
+  padding: 10px 20px;                              /* Kz added later */
+  border-radius: 5px;                              /* Kz added later */
+  cursor: pointer;                              /* Kz added later */
+}
+
+.button1 {
+  background-color: #02532B;
+  color: #ffffff;
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #02532B;
+	border: 2px solid #02532B;                             /* Kz added later */
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #02532B;
+  border: 2px solid #02532B;
+}
+
+.button2:hover {
+  background-color: #02532B;
+  color: #ffffff;
+}
+
+/* Hero Styles */
+.hero {
+  text-align: center;
+}
+
+.section1, .section2 {
+  margin-bottom: 20px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Slider Styles */
+.slider {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 9s infinite; /* Change images every 3 seconds (3 images * 3s) */
+}
+
+.image {
+  flex: 1;
+  background-size: cover;
+  height: 100%;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Navigation Dots Styles */
+.navigation-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation-dots label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Handle manual navigation using radio buttons */
+input[type="radio"]:checked + .slides {
+  animation-play-state: paused;
+}
+
+#slide1:checked ~ .slides {
+  animation: slide1 9s infinite; /* Change images every 3 seconds (3 images * 3s) */
+}
+
+#slide2:checked ~ .slides {
+  animation: slide2 9s infinite; /* Change images every 3 seconds (3 images * 3s) */
+}
+
+#slide3:checked ~ .slides {
+  animation: slide3 9s infinite; /* Change images every 3 seconds (3 images * 3s) */
+}
+
+@keyframes slide1 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes slide2 {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  33.33% {
+    transform: translateX(-200%);
+  }
+  66.66% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide3 {
+  0%, 100% {
+    transform: translateX(-200%);
+  }
+  33.33% {
+    transform: translateX(0);
+  }
+  66.66% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.section1 h1, .section2 h2 {
+  font-family: 'Komet', sans-serif;
+}
+
+.image {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 10px; /* Add a small margin to separate the image and buttons */
+}
+
+.button1, .button2 {
+  margin-top: 10px; /* Add margin between the buttons */
+}
+
+/* Display buttons side-by-side */
+.buttons-container {
+  display: flex;
+}
+
+.button1, .button2 {
+  margin: 0 5px; /* Add spacing between the buttons */
+}
+
+.image{
+	margin-top: 30px;                           /* Kz added later */
+} 
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #02532B;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.email-input {
+  padding: 8px;
+  font-family: 'Owners Text', sans-serif;
+}
+
+/* Footer2 Styles */
+.footer2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column1, .column2, .column3, .join-us {
+  list-style: none;
+}
+
+.column1 li, .column2 li, .column3 li {
+  margin-bottom: 5px;
+}
+
+.join-us li {
+  margin-left: 10px;
+}
+
+/* Footer3 Styles */
+.footer3 {
+  margin-top: 20px;
+}
+
+.separate-words {
+  display: flex;
+  justify-content: center;
+}
+
+.separate-words span {
+  margin: 0 10px;
+}
+
+
+.cards{
+	margin: 50px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.card{
+	border: 2px solid lightgray;
+	height: -100px;
+	width: 250px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1%;
+	color: #02532B;
+}
+
+.footer1{
+	display: flex;
+}
+
+.Footlogo{
+	margin-left: 0px;
+}
+
+.Subscribe{
+	margin-left: 900px;
+}
+.footicon{
+	height: 20px;
+	widows: 20px;
+}
+
+/* Style for the parent div */
+  .scrolling-banner {
+    height: 50px;
+    background-color: #02532B;
+    overflow: hidden; /* Hides any overflowing content */
+    position: relative;
+  }
+
+  /* Style for the scrolling text */
+  .scrolling-banner p {
+    color: white;
+    position: absolute;
+    white-space: nowrap; /* Prevents text from wrapping */
+    top: 0;
+    left: 100%; /* Starts off the screen, so it scrolls in from the right */
+    animation: marquee 10s linear infinite; /* Adjust the animation duration as needed */
+  }
+
+  /* Keyframes for the scrolling animation */
+  @keyframes marquee {
+    0% { left: 100%; }
+    100% { left: -100%; } /* Moves the text completely off the screen */
+  }
